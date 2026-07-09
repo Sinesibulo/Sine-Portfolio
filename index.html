@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sinesipho Sibulo | IT Graduate & Business Analyst</title>
+    <title>Sinesipho Sibulo | Business Analyst | Data &amp; AI</title>
+    <meta name="description"
+        content="Sinesipho Sibulo — Data & Business Analyst with hands-on experience in data analysis, B-BBEE compliance reporting, reconciliation, and AI-powered workflows at Naspers.">
 
     <!-- Google Fonts: Poppins & Roboto Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,7 +26,7 @@
     <style>
         /* ---
             style.css
-            Elegant Mauve & Pink Theme
+            Elegant Mauve & Pink Theme — refreshed
         --- */
 
         /* --- Variable Definitions --- */
@@ -53,7 +55,7 @@
             --fz-sm: 0.9rem;
             --fz-xs: 0.8rem;
 
-            --border-radius: 4px;
+            --border-radius: 6px;
             --nav-height: 100px;
             --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
         }
@@ -312,6 +314,10 @@
             margin-bottom: 1.5rem;
         }
 
+        .hero h2 .accent-text {
+            color: var(--accent);
+        }
+
         .tagline {
             max-width: 540px;
             margin-bottom: 2rem;
@@ -448,8 +454,21 @@
         }
 
         .timeline-content ul {
-            list-style-position: inside;
-            padding-left: 1rem;
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .timeline-content ul li {
+            position: relative;
+            padding-left: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content ul li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
         }
 
 
@@ -478,6 +497,7 @@
             align-items: center;
             gap: 0.5rem;
             transition: var(--transition);
+            border: 1px solid transparent;
         }
 
         .skills-grid li:hover,
@@ -485,6 +505,7 @@
         .interests-list li:hover {
             transform: translateY(-5px);
             color: var(--accent);
+            border-color: var(--accent);
         }
 
         .skills-grid li i,
@@ -515,12 +536,30 @@
             border-radius: var(--border-radius);
             transition: var(--transition);
             box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+            border: 1px solid transparent;
+            display: flex;
+            flex-direction: column;
         }
 
         .project-card:hover,
         .reference-card:hover {
             transform: translateY(-7px);
             box-shadow: 0 20px 30px -15px rgba(2, 12, 27, 0.7);
+            border-color: var(--lightest-navy);
+        }
+
+        .project-card.featured {
+            border: 1px solid var(--accent);
+        }
+
+        .project-badge {
+            font-family: var(--font-mono);
+            font-size: var(--fz-xs);
+            color: var(--dark-navy);
+            background: var(--accent);
+            border-radius: 999px;
+            padding: 0.1rem 0.75rem;
+            margin-left: 0.5rem;
         }
 
         .project-header {
@@ -544,6 +583,10 @@
         .project-card h3 {
             font-size: var(--fz-lg);
             margin-bottom: 0.5rem;
+        }
+
+        .project-card p {
+            flex-grow: 1;
         }
 
         .project-tech {
@@ -805,6 +848,7 @@
                     <li><a href="#about">/about</a></li>
                     <li><a href="#experience">/experience</a></li>
                     <li><a href="#skills">/skills</a></li>
+                    <li><a href="#certifications">/certifications</a></li>
                     <li><a href="#projects">/projects</a></li>
                     <li><a href="#contact">/contact</a></li>
                 </ul>
@@ -822,6 +866,7 @@
             <li><a href="#experience">/experience</a></li>
             <li><a href="#education">/education</a></li>
             <li><a href="#skills">/skills</a></li>
+            <li><a href="#certifications">/certifications</a></li>
             <li><a href="#projects">/projects</a></li>
             <li><a href="#contact">/contact</a></li>
         </ul>
@@ -834,9 +879,10 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <h1 class="glitch" data-text="Sinesipho Sibulo">Sinesipho Sibulo</h1>
-                    <h2>IT Graduate &amp; Business Analyst</h2>
-                    <p class="tagline">Bridging the gap between business needs and technological solutions with
-                        data-driven analysis and innovative thinking.</p>
+                    <h2>Data &amp; Business Analyst <span class="accent-text">|</span> AI Enthusiast</h2>
+                    <p class="tagline">I turn messy data into clear answers — combining data analysis, business
+                        analysis, and AI-powered workflows across Python, Power BI, SQL, and Excel to help teams
+                        make better decisions.</p>
                     <div class="socials">
                         <a href="assets/Sinesipho_Sibulo_CV.pdf.doc" download class="btn btn-primary">Download CV <i
                                 class="fas fa-download"></i></a>
@@ -852,6 +898,7 @@
                             onerror="this.onerror=null;this.src='https://placehold.co/350x350/5e435a/f5f0f3?text=S.S';">
                     </div>
                 </div>
+            </div>
         </section>
 
         <!-- About Me Section -->
@@ -859,22 +906,26 @@
             <div class="container">
                 <h2 class="section-title" data-text="[ About Me ]">[ About Me ]</h2>
                 <p>
-                    Hey there! I'm Sinesipho Sibulo, a 24-year-old recent graduate with a National Diploma in
-                    Information
-                    Technology,
-                    specializing in Business Analysis, from Walter Sisulu University (2024). I'm passionate about
-                    solving real-world problems through tech and enjoy turning complex challenges into clear, structured
-                    solutions.
+                    Hey there! I'm Sinesipho Sibulo, a Data &amp; Business Analyst with a National Diploma in
+                    Information and Communications Technology (Business Analysis) from Walter Sisulu University
+                    (2024). I'm currently a Transformation Data Analyst Intern at Naspers/Prosus, working across the
+                    Transformation and Naspers Labs space — from Monitoring &amp; Evaluation (M&amp;E) and B-BBEE
+                    transformation analytics to spend analysis, financial reconciliations, and building web tools
+                    and dashboards used across the business.
                     <br><br>
-                    During my studies, I built a strong foundation in programming, databases, and software development.
-                    I’ve also gained experience working with both front-end and back-end technologies, and I enjoy
-                    learning how different systems work together to solve business needs.
+                    Before Naspers, I completed a year-long AI &amp; Data Engineering internship at CAPACITI (UVU
+                    Africa), where I built data pipelines, cleaned and preprocessed datasets for machine learning
+                    models, developed NLP and analytics dashboards, audited ML models for bias, and shipped
+                    AI-powered web apps — earning two Candidate Spotlight nominations along the way. At Naspers I've
+                    run monthly B-BBEE compliance reporting cycles, supported a full financial-year audit close-off
+                    across multiple auditor streams, and coordinated the Naspers Labs Youth Mentorship programme
+                    end-to-end, including designing and building its mentor-booking website. I use AI tools like
+                    Claude, Gemini, and Toqan daily to automate reporting, analysis, and document production.
                     <br><br>
-                    I’m self-motivated and work well independently, but I also enjoy collaborating with others to share
-                    ideas and grow as a team. I'm highly detail-oriented and confident in my ability to communicate
-                    technical concepts clearly, whether in a team setting or working directly with stakeholders. I’m
-                    excited to apply what I’ve learned and continue growing in a space that values innovation, growth,
-                    and meaningful impact.
+                    I work across Python, Power BI, SQL, Excel, and modern web technologies, and I enjoy
+                    translating technical concepts into clear language for stakeholders. I'm looking to grow in
+                    data analysis, business analysis, and IT/tech roles where AI and data-driven thinking create
+                    real impact.
                 </p>
             </div>
         </section>
@@ -885,20 +936,83 @@
                 <h2 class="section-title" data-text="[ Experience ]">[ Experience ]</h2>
                 <ul class="timeline">
                     <li class="timeline-item">
-                        <p class="timeline-period">Present</p>
-                        <h3 class="timeline-title">Digital Associate</h3>
-                        <h4 class="timeline-subtitle">CAPACITI</h4>
-                    </li>
-                    <li class="timeline-item">
-                        <p class="timeline-period">2024 - 2025</p>
-                        <h3 class="timeline-title">Flexi Worker</h3>
-                        <h4 class="timeline-subtitle">ClicksRetailers</h4>
+                        <p class="timeline-period">2026 - Present</p>
+                        <h3 class="timeline-title">Transformation Data Analyst Intern</h3>
+                        <h4 class="timeline-subtitle">Naspers / Prosus — Transformation &amp; Naspers Labs</h4>
                         <div class="timeline-content">
                             <ul>
-                                <li>Worked in teams of people with different responsibilities.</li>
-                                <li>Strived to reach personal goals, collaborating with colleagues helped create a
-                                    positive and productive working environment.</li>
-                                <li>Kept records of sales-related activities in the company database.</li>
+                                <li>Develop structured reports and dashboards communicating key transformation
+                                    metrics and progress to internal stakeholders and leadership.</li>
+                                <li>Perform data validation and quality checks using SQL queries to ensure the
+                                    accuracy and consistency of compliance datasets used for regulatory
+                                    reporting.</li>
+                                <li>Analyze compliance and Monitoring &amp; Evaluation (M&amp;E) data to support
+                                    B-BBEE regulatory reporting and transformation performance tracking.</li>
+                                <li>Manage monthly B-BBEE compliance submissions and supported the FY26 audit
+                                    close-off across four auditor streams (including Deloitte ESG), building a
+                                    ~50-item "Requested vs Submitted" audit tracker and submission log.</li>
+                                <li>Produce B-BBEE spend-analysis reports from financial journal data — supplier,
+                                    G/L account, cost centre, and VAT breakdowns — feeding procurement scorecard
+                                    reporting.</li>
+                                <li>Perform multi-source reconciliations (supplier invoices vs payment advices vs
+                                    ledger; scorecard licence purchases vs usage), identifying unposted payments
+                                    and cross-entity licence discrepancies for management action.</li>
+                                <li>Manage user administration on the BEE123 B-BBEE scorecard platform —
+                                    provisioning, controlling, and auditing access across all company scorecards
+                                    for internal teams and 6+ external partner organisations, and maintaining the
+                                    user-access register.</li>
+                                <li>Coordinate the Naspers Labs Youth Mentorship programme end-to-end: built the
+                                    mentor-booking website, an 18-mentor tracking dashboard, and feedback forms,
+                                    and manage scheduling and communications between mentors and mentees.</li>
+                                <li>Co-plan and deliver DE&amp;I events and campaigns in the Transformation space —
+                                    including Mandela Month, Women's Day, and Youth Month initiatives — building
+                                    costed event plans and budget models (e.g. a procurement model for 770 Mandela
+                                    Day meal packs) presented to leadership.</li>
+                                <li>Collaborate with cross-functional teams to improve data collection frameworks
+                                    and reporting processes.</li>
+                                <li>Use AI tools (Claude, Gemini, Toqan) daily to automate reporting,
+                                    reconciliation, research, and document production.</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="timeline-item">
+                        <p class="timeline-period">04/2025 - 03/2026</p>
+                        <h3 class="timeline-title">AI &amp; Data Engineering Intern</h3>
+                        <h4 class="timeline-subtitle">CAPACITI (UVU Africa)</h4>
+                        <div class="timeline-content">
+                            <ul>
+                                <li>Built foundational data pipelines to process and structure datasets for
+                                    analytics projects, working in Python, Pandas, and Jupyter Notebook.</li>
+                                <li>Performed data cleaning and preprocessing to improve dataset quality for
+                                    machine learning models, and applied fairness metrics and bias-mitigation
+                                    strategies in a bias audit of an income-prediction ML model.</li>
+                                <li>Created data visualizations and interactive dashboards (Python, Power BI,
+                                    Streamlit, Matplotlib) to present insights from structured datasets — including
+                                    a sentiment analysis dashboard (NLP) and a student performance analytics
+                                    dashboard.</li>
+                                <li>Designed and built websites, interactive web apps, and AI-powered tools —
+                                    including an ATS-friendly AI resume builder (Gemini API) and an AI educational
+                                    chatbot (Landbot, Zapier) — using HTML, CSS, JavaScript, and Tailwind CSS.</li>
+                                <li>Worked hands-on with a range of AI tools and APIs, and completed formal
+                                    training in AI methodologies, data engineering concepts, big data, cloud
+                                    computing, and analytics workflows.</li>
+                                <li>Twice nominated for the CAPACITI Candidate Spotlight in recognition of strong
+                                    performance, commitment to learning, and contribution to data engineering
+                                    projects.</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="timeline-item">
+                        <p class="timeline-period">11/2024 - 01/2025</p>
+                        <h3 class="timeline-title">Flexi Worker</h3>
+                        <h4 class="timeline-subtitle">Clicks Retail</h4>
+                        <div class="timeline-content">
+                            <ul>
+                                <li>Provided customer service and operational support in a fast-paced retail
+                                    environment, keeping records of sales-related activities in the company
+                                    database.</li>
+                                <li>Strengthened communication, teamwork, and problem-solving skills while
+                                    supporting store operations.</li>
                             </ul>
                         </div>
                     </li>
@@ -911,13 +1025,12 @@
                 <h2 class="section-title" data-text="[ Education ]">[ Education ]</h2>
                 <ul class="timeline">
                     <li class="timeline-item">
-                        <p class="timeline-period">2019 - 2024</p>
-                        <h3 class="timeline-title">National Diploma in Information Technology</h3>
+                        <h3 class="timeline-title">National Diploma in Information and Communications Technology
+                            (Business Analysis)</h3>
                         <h4 class="timeline-subtitle">Walter Sisulu University</h4>
                     </li>
                     <li class="timeline-item">
-                        <p class="timeline-period">2017 - 2018</p>
-                        <h3 class="timeline-title">Matric Certificate</h3>
+                        <h3 class="timeline-title">Matric</h3>
                         <h4 class="timeline-subtitle">Gobe Commercial High School</h4>
                     </li>
                 </ul>
@@ -930,14 +1043,33 @@
                 <h2 class="section-title" data-text="[ Proficiencies ]">[ Proficiencies ]</h2>
                 <div class="skills-container">
                     <div>
-                        <h3>Technical Proficiencies</h3>
+                        <h3>Data &amp; Analytics</h3>
+                        <br>
+                        <ul class="skills-grid">
+                            <li><i class="fas fa-table"></i> Excel (Advanced)</li>
+                            <li><i class="fas fa-database"></i> SQL</li>
+                            <li><i class="fas fa-chart-pie"></i> Power BI</li>
+                            <li><i class="fab fa-python"></i> Python &amp; Pandas</li>
+                            <li><i class="fas fa-book"></i> Jupyter Notebook</li>
+                            <li><i class="fas fa-chart-line"></i> Data Visualization</li>
+                            <li><i class="fas fa-stream"></i> Data Pipelines</li>
+                            <li><i class="fas fa-language"></i> NLP</li>
+                            <li><i class="fas fa-brain"></i> Machine Learning</li>
+                            <li><i class="fas fa-balance-scale"></i> Reconciliation</li>
+                            <li><i class="fas fa-clipboard-check"></i> Compliance Reporting</li>
+                            <li><i class="fas fa-tasks"></i> M&amp;E Analytics</li>
+                        </ul>
+                        <br>
+                        <h3>Web, AI &amp; Automation</h3>
                         <br>
                         <ul class="skills-grid">
                             <li><i class="fab fa-html5"></i> HTML</li>
                             <li><i class="fab fa-css3-alt"></i> CSS</li>
-                            <li><i class="fab fa-python"></i> Basic Python</li>
-                            <li><i class="fas fa-database"></i> SQL</li>
+                            <li><i class="fab fa-js"></i> JavaScript</li>
+                            <li><i class="fas fa-robot"></i> AI Tools &amp; APIs</li>
                             <li><i class="fas fa-cogs"></i> API Integration</li>
+                            <li><i class="fas fa-bolt"></i> Automation</li>
+                            <li><i class="fas fa-cloud"></i> Cloud Computing</li>
                             <li><i class="fas fa-file-alt"></i> MS Office Suite</li>
                         </ul>
                     </div>
@@ -945,21 +1077,54 @@
                         <h3>Soft Skills</h3>
                         <br>
                         <ul class="soft-skills-list">
-                            <li><i class="fas fa-comments"></i> Communication</li>
-                            <li><i class="fas fa-users"></i> Teamwork</li>
-                            <li><i class="fas fa-sync-alt"></i> Adaptability</li>
-                            <li><i class="fas fa-clock"></i> Time Management</li>
+                            <li><i class="fas fa-lightbulb"></i> Analytical Thinking</li>
+                            <li><i class="fas fa-comments"></i> Stakeholder Communication</li>
+                            <li><i class="fas fa-puzzle-piece"></i> Problem Solving</li>
+                            <li><i class="fas fa-users"></i> Collaboration</li>
+                            <li><i class="fas fa-search"></i> Attention to Detail</li>
                         </ul>
-                    </div>
-                    <div>
+                        <br>
                         <h3>Interests</h3>
                         <br>
                         <ul class="interests-list">
                             <li><i class="fas fa-chart-line"></i> Data/Business Analysis</li>
+                            <li><i class="fas fa-brain"></i> AI &amp; Automation</li>
                             <li><i class="fas fa-laptop-code"></i> Software Development</li>
-                            <li><i class="fas fa-brain"></i> Data Science</li>
                             <li><i class="fas fa-server"></i> Data Engineering</li>
                         </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="section" style="padding-top: 0;">
+            <div class="container">
+                <h2 class="section-title" data-text="[ Certifications ]">[ Certifications ]</h2>
+                <div class="reference-grid">
+                    <div class="reference-card">
+                        <h4><i class="fas fa-certificate"></i> Data Engineering Certification</h4>
+                        <p>Big Data, Artificial Intelligence &amp; Ethics</p>
+                    </div>
+                    <div class="reference-card">
+                        <h4><i class="fas fa-certificate"></i> Microsoft AI &amp; Cybersecurity Fundamentals</h4>
+                        <p>Microsoft</p>
+                    </div>
+                    <div class="reference-card">
+                        <h4><i class="fas fa-certificate"></i> Understanding and Visualizing Data with Python</h4>
+                        <p>Data analysis &amp; visualization with Python</p>
+                    </div>
+                    <div class="reference-card">
+                        <h4><i class="fas fa-certificate"></i> Data Science in Real Life</h4>
+                        <p>Applied data science practices</p>
+                    </div>
+                    <div class="reference-card">
+                        <h4><i class="fas fa-certificate"></i> Cloud &amp; DevOps Bootcamp</h4>
+                        <p>Exlearn Technologies</p>
+                    </div>
+                    <div class="reference-card">
+                        <h4><i class="fas fa-certificate"></i> Microsoft Digital Literacy Certificate</h4>
+                        <p>Microsoft</p>
                     </div>
                 </div>
             </div>
@@ -970,20 +1135,58 @@
             <div class="container">
                 <h2 class="section-title" data-text="[ My Projects ]">[ My Projects ]</h2>
                 <div class="project-grid">
-                    <div class="project-card">
+                    <div class="project-card featured">
                         <div class="project-header">
                             <i class="fas fa-folder-open"></i>
                             <div class="project-links">
-                                <a href="https://github.com/Ondela1/Ai-Resume-Builders" target="_blank"><i
-                                        class="fab fa-github"></i></a>
+                                <a href="https://mentorshipmonth.netlify.app/" target="_blank"
+                                    aria-label="Live site"><i class="fas fa-external-link-alt"></i></a>
                             </div>
                         </div>
-                        <h3>AI Resume Builder</h3>
-                        <p>A smart, simple & ATS-Friendly resume builder to streamline the resume creation process.</p>
+                        <h3>Naspers Labs Mentorship Platform <span class="project-badge">New</span></h3>
+                        <p>A mentor-booking website built for the Naspers Labs Youth Mentorship programme and
+                            showcased at the Tech Talent Thursday Finale — featuring a filterable directory of 18
+                            mentors, mentor profiles, availability, and a session-booking flow.</p>
                         <ul class="project-tech">
                             <li>HTML</li>
-                            <li>Tailwind CSS</li>
-                            <li>Gemini API</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>Netlify</li>
+                        </ul>
+                    </div>
+                    <div class="project-card featured">
+                        <div class="project-header">
+                            <i class="fas fa-folder-open"></i>
+                            <div class="project-links">
+                            </div>
+                        </div>
+                        <h3>B-BBEE Audit &amp; Reconciliation Toolkit <span class="project-badge">New</span></h3>
+                        <p>Internal data tooling built at Naspers: an FY26 audit submission log and ~50-item
+                            "Requested vs Submitted" tracker across four auditor streams, spend-analysis workbooks
+                            from financial journal data, and multi-source reconciliations that surfaced unposted
+                            payments and licence discrepancies. (Internal — no public link.)</p>
+                        <ul class="project-tech">
+                            <li>Excel</li>
+                            <li>Google Sheets</li>
+                            <li>Data Reconciliation</li>
+                            <li>AI-assisted analysis</li>
+                        </ul>
+                    </div>
+                    <div class="project-card featured">
+                        <div class="project-header">
+                            <i class="fas fa-folder-open"></i>
+                            <div class="project-links">
+                            </div>
+                        </div>
+                        <h3>Mentorship Tracker Dashboard <span class="project-badge">New</span></h3>
+                        <p>A live operations dashboard tracking 18 mentors across the Naspers Labs Youth Mentorship
+                            programme — booking and invite status, focus areas, confirmed availability, and session
+                            scheduling — paired with automated feedback collection forms. (Internal — no public
+                            link.)</p>
+                        <ul class="project-tech">
+                            <li>Google Sheets</li>
+                            <li>Google Forms</li>
+                            <li>Programme Ops</li>
                         </ul>
                     </div>
                     <div class="project-card">
@@ -995,12 +1198,65 @@
                             </div>
                         </div>
                         <h3>Sentiment Analysis Dashboard</h3>
-                        <p>A user-friendly web app for analyzing the sentiment of text data using NLP and visual
-                            insights.</p>
+                        <p>A sentiment analysis system that classifies sentiment trends in customer feedback using
+                            Natural Language Processing, with interactive dashboards presenting the insights to
+                            support data-driven decision-making.</p>
                         <ul class="project-tech">
+                            <li>Python</li>
+                            <li>NLP / TextBlob</li>
                             <li>Streamlit</li>
-                            <li>TextBlob</li>
                             <li>Matplotlib</li>
+                        </ul>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-header">
+                            <i class="fas fa-folder-open"></i>
+                            <div class="project-links">
+                            </div>
+                        </div>
+                        <h3>Student Performance Analytics Dashboard</h3>
+                        <p>Analysed academic performance datasets to identify patterns and trends in student
+                            results — cleaning and transforming raw data with Python and Pandas, then building
+                            dashboards and visualisations to communicate performance insights.</p>
+                        <ul class="project-tech">
+                            <li>Python</li>
+                            <li>Pandas</li>
+                            <li>Data Visualization</li>
+                        </ul>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-header">
+                            <i class="fas fa-folder-open"></i>
+                            <div class="project-links">
+                            </div>
+                        </div>
+                        <h3>Bias Audit — Income Prediction Model</h3>
+                        <p>Audited a machine learning income-prediction model for bias: applied fairness metrics
+                            and bias-mitigation strategies to improve model equity and transparency, and presented
+                            findings on responsible AI and ethical data practices.</p>
+                        <ul class="project-tech">
+                            <li>Python</li>
+                            <li>Machine Learning</li>
+                            <li>Responsible AI</li>
+                        </ul>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-header">
+                            <i class="fas fa-folder-open"></i>
+                            <div class="project-links">
+                                <a href="https://github.com/Ondela1/Ai-Resume-Builders" target="_blank"><i
+                                        class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3>AI Resume Builder</h3>
+                        <p>An AI-powered, ATS-friendly resume builder that generates structured resumes from user
+                            input, with automation to streamline creation and data-processing logic that customises
+                            output for different professional roles.</p>
+                        <ul class="project-tech">
+                            <li>HTML</li>
+                            <li>Tailwind CSS</li>
+                            <li>Gemini API</li>
+                            <li>AI Automation</li>
                         </ul>
                     </div>
                     <div class="project-card">
@@ -1013,7 +1269,7 @@
                         </div>
                         <h3>AI Educational Chatbot</h3>
                         <p>An interactive AI educational chatbot that serves as a knowledge assistant for AI
-                            fundamentals.</p>
+                            fundamentals, built with a no-code conversational platform and workflow automation.</p>
                         <ul class="project-tech">
                             <li>Landbot</li>
                             <li>Zapier</li>
@@ -1029,21 +1285,24 @@
                 <h2 class="section-title" data-text="[ References ]">[ References ]</h2>
                 <div class="reference-grid">
                     <div class="reference-card">
-                        <h4>Thando Gwavu</h4>
-                        <p>Clicks Manager</p>
-                        <p><i class="fas fa-phone"></i> 0712036422</p>
+                        <h4>Ashika Kirpal</h4>
+                        <p>Head of Naspers Labs and Transformation</p>
+                        <p><i class="fas fa-envelope"></i> ashika.kirpal@naspers.com</p>
+                    </div>
+                    <div class="reference-card">
+                        <h4>Yonela Mbanga</h4>
+                        <p>Transformation Specialist, Naspers</p>
+                        <p><i class="fas fa-envelope"></i> yonela.mbanga@naspers.com</p>
+                    </div>
+                    <div class="reference-card">
+                        <h4>Tando Dubeni</h4>
+                        <p>Digital Skills Programmes Manager, Naspers</p>
+                        <p><i class="fas fa-envelope"></i> tando.dubeni@naspers.com</p>
                     </div>
                     <div class="reference-card">
                         <h4>Oarabile Mogase</h4>
-                        <p>Talent Coach</p>
-                        <p><i class="fas fa-envelope"></i> Oarabile.Mogase@capaciti.org.za</p>
-                        <p><i class="fas fa-phone"></i> 0676422151 / 0210037509</p>
-                    </div>
-                    <div class="reference-card">
-                        <h4>Lelethu Zepe</h4>
-                        <p>Mentor</p>
-                        <p><i class="fas fa-envelope"></i> Zepel@dws.gov.za</p>
-                        <p><i class="fas fa-phone"></i> 0818544938</p>
+                        <p>Supervisor, CAPACITI</p>
+                        <p><i class="fas fa-envelope"></i> oarabile.mogase@capaciti.org.za</p>
                     </div>
                 </div>
             </div>
@@ -1053,8 +1312,8 @@
         <section id="contact" class="section">
             <div class="container">
                 <h2 class="section-title" data-text="[ Get In Touch ]">[ Get In Touch ]</h2>
-                <p class="contact-intro">I'm currently seeking new opportunities. Have a question or want to work
-                    together? Feel free to reach out.</p>
+                <p class="contact-intro">I'm currently seeking new opportunities in data analysis, business analysis,
+                    and tech. Have a question or want to work together? Feel free to reach out.</p>
                 <div class="contact-content">
                     <div class="contact-info">
                         <h3>Contact Information</h3>
