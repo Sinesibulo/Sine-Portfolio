@@ -1,2 +1,2 @@
 # Sine Portfolio
-sinsesipho portfolio
+sinesipho portfolio
